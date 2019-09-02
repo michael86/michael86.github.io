@@ -112,6 +112,10 @@ footer{
     height: 50px;
 }
 
+footer p {
+    margin-top: 25px;
+}
+
 /*Start of mobile size.*/
 @media(max-width: 948px){
 
