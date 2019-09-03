@@ -1,143 +1,171 @@
-/* Global */
-body{
+/*global*/
+*{
     margin: 0;
     padding: 0;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Chilanka';
 }
 
 .container{
     width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
 
-.yellow{
-    color: rgb(255, 197, 89);
-    font-size: 1.1em;
+.scrolled{
+    background-color: #f0bbc1;
+    border-bottom: 2px solid #266dd3;
+    transition-duration: 0.5s;
 }
 
-/*Start of header*/
+/*Navbar*/
 header{
-    background-color: rgb(63, 63, 63);
-    color: #fff;
-    border-bottom: 3px solid rgb(255, 203, 107);
-    min-height: 70px;
+    width: 100%;
+    position: fixed;
+    height: 55px;
+    top: 0;
 }
 
 header h1{
-    margin:0;
-    padding-top: 15px;
-}
-
-header a{
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0 10px 0 10px;
-    margin-right: 25px;
-}
-
-header ul{
-    margin: 0;
-    padding: 0;
-}
-
-header li{
-    display: inline;
-}
-
-header nav {
-    float: right;
-    padding-top: 25px;
-}
-
-/* Header id's*/
-header #brand{
+    font-size: 2.5em;
     float: left;
+    color: #266dd3;
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
-header #active{
-    color: rgb(255, 203, 107);
+nav {
+    float: right; 
+    margin: 15px 15px 0 15px;
 }
 
-/*Start of gallery*/
-#gallery{
-    background: url("https://cdn.mos.cms.futurecdn.net/283d2b36f19d2e2e0fd3cf1b435844f1.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width:100%;
-    height: 470px;
+nav ul li{
+    list-style: none;
+    display: inline; 
+    font-size: 1.2rem;  
+    padding: 0 15px;
 }
 
-#gallery .gallery-font{
-    margin: 0;
-    padding: 0;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px rgba(63, 63, 63, 0.45);
-    color: rgb(255, 197, 89);
-    text-align: center;
-    padding-top: 100px;
+.active{
+    color: #266dd3;
 }
 
-/*Start of external links*/
-
+/*Main video*/
 #boxes{
-    width: 100%;
-    margin: 20px auto 0 auto;
-}
-
-#boxes .box{
-    float: left;
-    text-align: center;
-    width: 30.0%;
-    height: 335px;
-    margin: 0 0 20px 20px;
-    padding-top: 25px;
-    border: 1px solid rgb(63, 63, 63);
-}
-
-#boxes .box:hover {
-    border: 1px dashed rgb(63, 63, 63);
-    border-radius: 25px;
-    background: rgb(255, 203, 107);
-}
-
-#boxes .box img{
-    width: 250px;
-    height: 250px;
-}
-
-/*Start of footer*/
-footer{
     clear: left;
-    background: rgb(255, 197, 89);
-    height: 50px;
+    margin-top: 50px;
+}
+
+/*boxes*/
+#introduction{ /*Main video*/
+    width: 100%;
+    height: 560px;
+}
+
+.box{ /*boxes under video*/
+    color: #266dd3;
+    border: 2px solid #266dd3;
+    float: left;
+    width: 35%;
+    height: 180px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-left: 10%;
+    margin-top: 25px;
+    border-radius: 25px;
+}
+
+.box a {
+    text-decoration: none;
+    color: #266dd3;
+}
+
+.box:hover{
+    background-color: #f0bbc1;
+    transition-duration: 0.5s;
+}
+
+.fa-youtube, .fa-instagram{
+    font-size: 50px;
+    color: #f0bbc1;
+}
+
+.box:hover .fa-youtube, .box:hover .fa-instagram{
+    color: #266dd3;
+    transition-duration: 0.5s;
+}
+
+.video-box iframe{ /*Set width of videos*/
+    width: 100%;
+}
+
+.video-box{
+    float: left;
+    width: 20%;
+    height: 180px;
+    box-sizing: border-box;
+    margin-left: 10%;
+    margin-top: 35px;
+}
+
+footer{
+    background: #f0bbc1;
+    clear: left;
+    height: 55px;
 }
 
 footer p {
-    padding-top: 16px;
+    color: #266dd3;
     text-align: center;
+    padding-top: 23.5px;
 }
 
-/*Start of mobile size.*/
-@media(max-width: 948px){
-
-    header #brand, header nav, #boxes .box{
-        width: 100%;
-        float: none;
-        text-align: center;       
+@media only screen and (max-width: 1200px){
+    
+    .box{ /*boxes under video fix for font spilling out of div*/
+        height: 220px;
     }
+}
 
-    h3 {
-        margin: 0;
-        padding: 0;
+@media only screen and (max-width: 850px){ /*mobile*/
+    
+    .container{ 
+        width: 90%;
     }
-
-    #boxes .box{
-    margin: 20px 0 0 0;
-    height: 350px;
-    }
-
-    small {
+    
+    header h1{ /*Hide header*/
         display: none;
     }
+    
+    nav {
+        float: none;
+        text-align: center;
+    }
+    
+    nav ul{
+        padding-top: 15px;
+    }
+
+    #introduction{ /*Main video*/
+        width: 100%;
+        height: auto;
+    }  
+
+    .box{
+        float: none;
+        width: 100%;
+        margin-left: 0; 
+        height: 150px;
+    }
+
+    .video-box{
+        float: none;
+        width: 100%;
+        height: auto;
+        margin: 25px 0 25px 0;
+    }
+    
 }
