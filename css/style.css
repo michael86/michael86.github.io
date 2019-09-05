@@ -1,172 +1,326 @@
-/*global*/
-*{
+/*Global*/
+* {
     margin: 0;
-    padding: 0;
-}
-
-body{
-    font-size: 16px;
-    font-family: 'Chilanka';
-}
-
-.container{
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.scrolled{
-    background-color: #f0bbc1;
-    border-bottom: 2px solid #266dd3;
-    transition-duration: 0.5s;
-}
-
-/*Navbar*/
-header{
-    width: 100%;
-    position: fixed;
-    height: 55px;
     top: 0;
 }
 
-header h1{
-    font-size: 2.5em;
-    float: left;
-    color: #266dd3;
-    padding-left: 15px;
+body{
+    background: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+/*Hide for mobile*/
+.company-name, aside, .aside-hide{
+    display: none;
+}
+
+/*Container and grid*/
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-auto-rows: minmax(50px, auto);
+    justify-items: center;
+}
+
+.cta-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*Header*/
+header{
+    background: white;
+}
+
+.contact-header{
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.contact-header .email,
+.contact-header .phone-number
+{
+    font-size: 0.7em;
+}
+
+.logo{
+    padding-top: 10px;
+    grid-column: 1/4;
+}
+
+/*Nav*/
+nav{
+    background-color: #005999;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    font-size: 1.1em;
+    padding-left: 2.5%;
+    color: white;
+}
+
+/*Main content*/
+main{
+    background-color: white;
+    border-bottom: 2px solid rgba(0, 89, 153, 0.4);
+}
+
+.main-title{
+    padding-top: 15px;
+    grid-column: 1/4;
+    color: #005999;
+}
+
+.main-content{
+    padding-top: 15px;
+    grid-column: 1/4;
+}
+
+.main-list{
+    padding-top: 15px;
+    text-align: left;
+    grid-column: 1/4;
+}
+
+.main-list a{
+    text-decoration: none;
+    color: #005999
+}
+
+.main-list ul{
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    line-height: 1.5em;
+}
+
+.main-outro{
+    grid-column: 1/4;
+    padding: 15px 0 25px 0;
+}
+
+/*Call to action*/
+.cta{
+    background-color: #f4f4f4;
+    justify-content: center;
+    padding: 15px 0 15px 0;
+}
+
+.cta h3 {
+    padding-bottom: 15px;
+}
+
+.box{
+    padding: 15px 0 15px 0;
+}
+
+.box img{
+    width: 275px;
+}
+
+.cta hr {
+    margin: 0 auto;
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #005999, #ccc);
+    background-image: -moz-linear-gradient(left, #ccc, #005999, #ccc);
+    background-image: -o-linear-gradient(left, #ccc, #005999, #ccc);
+}
+
+/*Cards*/
+.card{
+    background-color: white;
+    margin: 15px 0 15px 0;
+    border: 2px black dashed;
+    border-radius: 25px;
+    height: 400px;
+    font-size: 1.1em;
+}
+
+.card-top{
+    height: 50px;
+    background: #005999;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    border-bottom: 2px black dashed;
+}
+
+.card-body{
+    background: white;
+    height: 320px;
+}
+
+.card h3 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.card img{
     padding-top: 10px;
 }
 
-nav {
-    float: right; 
-    margin: 15px 15px 0 15px;
+.card p {
+    padding: 0 5px 0 5px;
 }
 
-nav ul li{
-    list-style: none;
-    display: inline; 
-    font-size: 1.2rem;  
-    padding: 0 15px;
-}
-
-.active{
-    color: #266dd3;
-}
-
-/*Main video*/
-#boxes{
-    clear: left;
-    margin-top: 50px;
-}
-
-/*boxes*/
-#introduction{ /*Main video*/
-    width: 100%;
-    height: 560px;
-}
-
-.box{ /*boxes under video*/
-    color: #266dd3;
-    border: 2px solid #266dd3;
-    float: left;
-    width: 35%;
-    height: 180px;
-    padding: 15px;
-    box-sizing: border-box;
-    margin-left: 10%;
-    margin-top: 25px;
-    border-radius: 25px;
-}
-
-.box a {
-    text-decoration: none;
-    color: #266dd3;
-}
-
-.box:hover{
-    background-color: #f0bbc1;
-    transition-duration: 0.5s;
-}
-
-.fa-youtube, .fa-instagram{
-    font-size: 50px;
-    color: #f0bbc1;
-}
-
-.box:hover .fa-youtube, .box:hover .fa-instagram{
-    color: #266dd3;
-    transition-duration: 0.5s;
-}
-
-.video-box iframe{ /*Set width of videos*/
-    width: 100%;
-}
-
-.video-box{
-    float: left;
-    width: 20%;
-    height: 180px;
-    box-sizing: border-box;
-    margin-left: 10%;
-    margin-top: 35px;
-}
-
+/*Footer*/
 footer{
-    background: #f0bbc1;
-    clear: left;
-    height: 55px;
+    background-color: #005999;
+    color: white;
+    padding-bottom: 15px;
 }
 
-footer p {
-    color: #266dd3;
-    text-align: center;
-    padding-top: 23.5px;
+.site-info{
+    padding: 15px 15px 0 0;
+    grid-column: 1/3;
+    grid-row: 1/1;
 }
 
-@media only screen and (max-width: 1200px){
-    
-    .box{ /*boxes under video fix for font spilling out of div*/
-        height: 220px;
+.footer-contact{
+    padding: 15px 0 0 15px;
+    grid-column: 2/4;
+    grid-row: 1/1;
+}
+
+/*Font editing*/
+.uppercase{
+    text-transform: uppercase;
+}
+
+/*Start of tablet*/
+@media only screen and (min-width: 768px){
+
+    /*Show all elements*/
+    aside, .company-name{
+        display: block;
     }
-}
 
-@media only screen and (max-width: 850px){ /*mobile*/
-    
-    .container{ 
-        width: 90%;
+    /*Re-align header info*/
+    .logo{
+        padding: 5px 0 15px 0;
+        justify-self: start;
+        grid-column: 1/3;
+        grid-row: 1/1; /*Forces logo into same row as contact-info*/
+        align-self: center;
     }
-    
-    header h1{ /*Hide header*/
+
+    .contact-header{
+        grid-column: 2/4;
+        grid-row: 1/1; /*forces contact info into same row as logo*/
+        justify-self: end;
+        align-self: center;
+        font-size: 2.0em;
+    }
+
+    /*Nav*/
+    nav{
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    nav ul{
+        padding-top: 7px;
+        text-align: left;
+    }
+
+    nav li {
+        padding-left: 14%;
+    }
+
+    /*Format aside (gallery)*/
+    .aside-wrapper{ /*Fix grid layout for aside gallery image sizes*/
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .aside-box{
+        background-color: white;
+    }
+
+    aside img{
+        width: 100%;
+    }
+
+    /*Re-align cards to be inline*/
+
+    .cta-wrapper{ /*Convert grid to 3 columns*/
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1em;
+    }
+
+    .cta-wrapper h3{ /*Shrink card title to fit*/
+        font-size: 0.9em;
+        padding: 0 5px 15px 5px;
+    }
+
+    .cta img{
+        width: 100%;
+    }
+
+    .cta hr { /*Hide hr as no longer needed*/
         display: none;
     }
-    
-    nav {
-        float: none;
-        text-align: center;
-    }
-    
-    nav ul{
-        padding-top: 0;
+}
+
+/* Start of desktop/latop */
+@media only screen and (min-width: 1000px){
+
+    /*Resize containers to 90%, showing background image*/
+    .containter, header, main, aside, footer, 
+    nav, .cta{ 
+        width: 90%;
+        margin: 0 auto;
     }
 
-    #introduction{ /*Main video*/
-        margin-top: 10px;
-        width: 100%;
-        height: auto;
-    }  
-
-    .box{
-        float: none;
-        width: 100%;
-        margin-left: 0; 
-        height: 200px;
+    /*Re-align header info*/
+    .logo{
+        justify-self: center;
+        grid-column: 1/2;
     }
 
-    .video-box{
-        float: none;
-        width: 100%;
-        height: auto;
-        margin: 25px 0 25px 0;
+    .contact-header{
+        justify-self: center;
+        align-self: center;
+        font-size: 2.8em;
     }
-    
+
+    nav li {
+        padding-left: 17%;
+    }
+
+    /*Format aside (gallery)*/
+
+    .aside-wrapper{
+        grid-template-columns: repeat(4,1fr); /*Increase columns by one to accomodate new image*/
+    }
+
+    .aside-hide{
+        display: block;
+    }
+
+    .aside-img{
+        width: 100%;
+        height: 350px;
+    }
+
+    .card{
+        height: 560px;
+    }
 }
