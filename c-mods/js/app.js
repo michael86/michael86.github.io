@@ -32,6 +32,16 @@ $('#cookie-agree').click(function(){
   $.cookie('cMods', '{accepted}', { expires: 7 });
 });
 
+$('#login').click(function(){
+  $('#login-form').fadeIn();
+  $('#login-form').animate({top: '40%'}, 200);
+});
+
+$('#close-login').click(function(){
+  $('#login-form').animate({top: '-400px'}, 200);
+  $('#login-form').fadeIn();
+});
+
 var app = document.getElementById('site-title');
 
 var typewriter = new Typewriter(app, {
