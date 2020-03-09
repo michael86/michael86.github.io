@@ -24,11 +24,27 @@ function makeNavSticky() {
   }
 }
 
-$('#cookie-consent').click(function(){
+$('#cookie-agree').click(function(){
   let height = $('#cookie').height();
   $('#cookie').stop().animate({bottom: `-${height}`});
   cookie_shown = !cookie_shown;
   cookies_agreed = !cookies_agreed;
-  console.log('attempting to place cookie')
   $.cookie('cMods', '{accepted}', { expires: 7 });
 });
+
+var app = document.getElementById('site-title');
+
+var typewriter = new Typewriter(app, {
+    loop: true,
+});
+
+typewriter.typeString('C-ModZ | <strong>FiveM Scripts</strong>')
+    .pauseFor(2500)
+    .deleteChars(13)
+    .typeString('<strong>ESX Support..</strong>')
+    .pauseFor(2500)
+    .deleteChars(13)
+    .typeString('<strong>Standalone..</strong>')
+    .pauseFor(2500)
+    .deleteAll()
+    .start();
