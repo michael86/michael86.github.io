@@ -47,7 +47,7 @@ a:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 50;
 }
 
 #search-input {
@@ -75,7 +75,7 @@ a:hover {
     margin-top: -100px;
     margin-left: -175px;
     background-color: rgba(0, 0, 0, 0.795);
-    z-index: 3;
+    z-index: 51;
     border-radius: 25px;
     color: #fff;
 }
