@@ -181,6 +181,10 @@ a:hover {
         bottom: -200px;
         height: 200px;
     }
+    #homepage-slider, .carousel-inner, .carousel-inner img {
+        width: 100%;
+        height: 250px;
+    }
 }
 
 /* 
