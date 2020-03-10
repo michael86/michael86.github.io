@@ -139,6 +139,16 @@ a:hover {
     margin-right: 2.5px;
 }
 
+/*This is applied to our body when login form is active ot prevent background clicks.*/
+.bodyOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.3); /* black semi-transparent */
+}
+
 #search-form {
     position: relative;
     top: 50%;

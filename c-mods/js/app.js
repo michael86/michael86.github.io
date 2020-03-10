@@ -35,11 +35,13 @@ $('#cookie-agree').click(function(){
 $('#login').click(function(){
   $('#login-form').fadeIn();
   $('#login-form').animate({top: '40%'}, 200);
+  $("body").append('<div class="bodyOverlay">');
 });
 
 $('#close-login').click(function(){
   $('#login-form').animate({top: '-400px'}, 200);
   $('#login-form').fadeIn();
+  $('.bodyOverlay').remove();
 });
 
 var app = document.getElementById('site-title');
