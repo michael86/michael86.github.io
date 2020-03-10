@@ -177,16 +177,25 @@ a:hover {
 */
 
 @media only screen and (max-width: 767px) {
+    /*Raise height of cookie banner, this allows the button to be clicked*/
     #cookie {
         bottom: -200px;
         height: 200px;
     }
+    /*Decrease height of carasol, prevents it taking up so much realestate.*/
     #homepage-slider, .carousel-inner, .carousel-inner img {
         width: 100%;
         height: 150px;
     }
+
+    /*Decrease width of login form, prevents it going of the edge of the screen.
+    *To be honest, this could probably be set above, thus removing it from here.*/
     #login-form{
-        width: 300px;
+        width: 97%;
+    }
+    /*Change the positioning of our close on login form to reflect the width change above.*/
+    .close:after, .close:before {
+        left: 5px;
     }
 }
 
