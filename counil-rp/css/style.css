@@ -532,8 +532,9 @@ text-decoration: underline;
 }
 
 .owl-item {
-  width: 225px;
+  width: 225px !important;
 }
+
 .staff-card img {
   border-radius: 200px;
 }
