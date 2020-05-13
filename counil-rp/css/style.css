@@ -529,9 +529,11 @@ text-decoration: underline;
 
 .staff-card {
  background-color: transparent;
- width: 225rem;
 }
 
+.owl-item {
+  width: 225px;
+}
 .staff-card img {
   border-radius: 200px;
 }
