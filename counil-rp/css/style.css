@@ -33,6 +33,7 @@
 
 /**************** extend css start ****************/
 /**************** common css start ****************/
+
 /* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_common.scss */
 body {
   font-family: "Aclonica", sans-serif;
@@ -475,6 +476,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-color: black; */
 }
 
 /* line 251, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_common.scss */
@@ -525,6 +527,17 @@ text-decoration: underline;
  background-color: transparent;
 }
 
+.staff-card img {
+  border-radius: 200px;
+}
+
+.staff-card .card-title {
+  text-decoration: underline;
+}
+
+.staff-card .card-position {
+  color: rgb(94, 94, 94);
+}
 
 /**************** custom css end ****************/
 /* Main Button Area css
@@ -2200,6 +2213,7 @@ text-decoration: underline;
   top: 0;
   width: 100%;
   z-index: 999;
+  background-color: black;
 }
 
 /* line 9, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
@@ -2216,14 +2230,14 @@ text-decoration: underline;
 
 /* line 18, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .main_menu .main-menu-item {
-  justify-content: center;
+  justify-content: start;
 }
 
 /* line 21, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .main_menu .main-menu-item ul li .nav-link {
   color: #fff;
   font-size: 15px;
-  padding: 43px 23px;
+  padding: 0 23px 0 23px !important;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
   line-height: 12px;
@@ -2863,7 +2877,7 @@ text-decoration: underline;
   position: relative;
   z-index: 1;
   width: 440px;
-  height: 440px;
+  height: 375px;
 }
 
 /* line 65, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
