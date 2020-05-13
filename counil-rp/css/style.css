@@ -529,6 +529,7 @@ text-decoration: underline;
 
 .staff-card {
  background-color: transparent;
+ width: 225rem;
 }
 
 .staff-card img {
