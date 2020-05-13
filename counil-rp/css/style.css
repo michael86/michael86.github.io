@@ -523,6 +523,10 @@ margin-bottom: 2.5vh;
 text-decoration: underline;
 }
 
+.card {
+  border: none;
+}
+
 .staff-card {
  background-color: transparent;
 }
