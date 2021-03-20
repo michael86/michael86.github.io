@@ -1,155 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sparkling Windows | Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PokeDex</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
     <header>
-        <div class="container">
-            <div class="wrapper">
-
-                <div class="logo">
-                    <img src="images/logo.png" alt="" class="logo">
-                    <h1 class="company-name">Lorem, ipsum.</h1>
-                    <p class="company-bio">Lorem ipsum dolor sit amet!</p>
-                </div>
-
-                <div class="contact-header">
-                    <h2 class="phone-number">123-456-7890</h2>
-                    <p class="email">I-Need-Cleaning@Fake.com</p>
-                </div>
-
-            </div>
-        </div>
+        <h1>Pokedex</h1>
     </header>
 
-    <nav>
-        <ul class="nav-bar">
-            <li>Home</li>
-            <li>Services</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
-
-    <!--Gallery-->
-    <aside>
-        <div class="aside-wrapper">
-            <div class="aside-box">
-                <img src="images/gallery-one.jpg" alt="">
-            </div>
-            <div class="aside-box">
-                <img src="images/gallery-two.jpg" alt="">
-            </div>
-            <div class="aside-box">
-                <img src="images/gallery-three.jpg" alt="">
-            </div>
-            <div class="aside-box aside-hide">
-                <img src="images/gallery-four.jpg" alt="">
+    <section class="container">
+        <div class="flex border-black box-shadow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQsqUHAlacdJqGpmYJyOkPo6xTYMzlCl5fdQ&usqp=CAU"
+                alt="" id="poke-img">
+            <div class="rev-flex">
+                <p class="pd-10 pb-0 weight-800">Poke Desc: <span id="description" class="weight-default"></span></p>
+                <p class="pd-10 pb-0 weight-800">Poke # <span id="id" class="weight-default">Id</span></p>
+                <p class="pd-10 pb-0 weight-800">Some of the Pokemon moves: <span id="moves"
+                        class="weight-default"></span></p>
+                <ul class="pd-10 pb-0 weight-800" id="moves">
+                </ul>
             </div>
         </div>
-    </aside>
 
-    <main>
-        <div class="container">
-            <div class="wrapper">
-                <div class="main-title">
-                    <h2 class="main-title">Your title here.</h2>
-                </div>
-                <div class="main-content">
-                    <p>A brief intro of your company here.</p>
-                    <br>
-                    <p>Stuff like, how long you've been running, what you offer, so on so forth. Can be as long as you
-                        require it to be. The more information the better...</p>
-                    <br>
-                    <p>Your services include:</p>
-                </div>
-                <div class="main-list">
-                    <ul>
-                        <li><a href="">These can be links to other pages.</a></li>
-                        <li><a href="">3rd party sites with reviews.</a></li>
-                        <li><a href="">Any awards your company received.</a></li>
-                        <li><a href="">Again, these can have as many as required.</a></li>
-                    </ul>
-                </div>
-                <div class="main-outro">
-                    <p>This part is not required and can be removed if required.</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi velit, vel obcaecati illum
-                        aspernatur doloremque repellat rerum, temporibus corporis ipsam aut eius. Delectus magni
-                        sapiente
-                        dolorem deserunt illo optio natus.</p>
-                </div>
-            </div>
-        </div>
-    </main>
+        <form action="submit" class="mt-5" id="user-input">
+            <input type="text" name="poke-name" id="poke-name">
+            <button>Search</button>
+        </form>
 
-    <section class="cta">
-        <div class="container">
-            <div class="cta-wrapper">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="box">
-                            <h3>Start of the cta section</h3>
-                            <img src="http://www.stone-magic.co.uk/wp-content/uploads/2019/02/ROUNDEL_2.png" alt="">
-                            <p>Contact us for a free quote <span class="uppercase">today</span> 123-456-7890</p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="card">
-                    <div class="card-top">
-                        <div class="box">
-                            <h3>Certified Window Cleaners.</h3>
-                            <img src="http://oraclems.com/wp-content/uploads/2018/06/safe-contractor-200x200.png"
-                                alt="">
-                            <p>Contact us on 123-456-7890</p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="card">
-                    <div class="card-top">
-                        <div class="box">
-                            <h3>Special discounts for seniors.</h3>
-                            <img src="https://www.gogoprint.sg/media/wysiwyg/GGP_brochure_2.png" alt="">
-                            <br>
-                            <p>We value all our customers and offer special discounts for senior citizens.</p>
-                            <br>
-                            <a href="#" target="_blank">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
+
     <footer>
-        <div class="wrapper">
-
-            <div class="site-info">
-                <h4 class="address">123 Fake Street</h4>
-                <p>Someplace</p>
-                <p>Somewhere</p>
-                <p>123 abc</p>
-            </div>
-
-            <div class="footer-contact">
-                <p>phone: 123-456-7890</p>
-                <p>Fax: 123-456-0987</p>
-                <p>Email: </p>
-            </div>
-
-        </div>
+        <p>Created by Michael Taylour</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js" async defer></script>
 </body>
 
 </html>
