@@ -55,9 +55,7 @@ ul {
 }
 
 .container {
-  position: absolute;
-  top: 20vh;
-  left: 30vw;
+  margin: auto;
   width: 40%;
 }
 
@@ -112,5 +110,9 @@ ul {
 @media only screen and (max-width: 769px) {
   input {
     width: 50%;
+  }
+
+  .container {
+    width: 95%;
   }
 }
