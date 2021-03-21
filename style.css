@@ -97,3 +97,9 @@ ul {
 .weight-default {
   font-weight: 100;
 }
+
+@media only screen and (max-width: 892px) {
+  .flex {
+    display: block;
+  }
+}
