@@ -36,6 +36,30 @@ TriggerEvent('esx:loadingScreenOff') --This is triggered once a player has chose
         code: `local vehicle = CreateVehicle(config.vehicle, config.spawnLocation, config.spawnLocation.heading, 1, 1)
 TriggerServerEvent("carlock:issueTempKey", GetVehicleNumberPlateText(vehicle));`,
         snippet: 'Due to vehicles being locked on spawn. We can utilize, "carlock:issueTempKey" to issue a temp key to a player. You need to pass over the vehicles license plate.'
+    },
+    ['mythic_progbar']: {
+        code: `TriggerEvent("mythic_progbar:client:progress", {
+    name = "preparing_lockpick",
+    duration = 3000,
+    label = "Preparing Tools",
+    useWhileDead = false,
+    canCancel = false,
+    controlDisables = {
+        disableMovement = false,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = false,
+    },
+    animation = {
+        animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
+        anim = "machinic_loop_mechandplayer",
+    }
+}, function(status)
+    if status then
+        -- progress bar finished without being cancelled. 
+    end
+end)`,
+        snippet: 'Mythic Prog Bar is used to play a progress bar, along with an animation if one is passed to it.'
     }
 
 }
