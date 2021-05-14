@@ -14,7 +14,7 @@
 
 <body>
 
-    <nav class="navbar navbar-background navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-background navbar-expand-lg navbar-light border-bottom border-3 highlight-border">
         <div class="container-fluid">
 
             <a class="navbar-brand" href="#">replace with image</a>
@@ -58,27 +58,61 @@
             <h1 class="mt-3 text-decoration-underline">Crypto Calculator</h1>
             <p class="mt-3">A simple and easy to use calculator for working out your current <span
                     class="highlight">crypto currencies</span> total value.</p>
+            <p>
+
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Disclaimer
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body text-dark">
+                    Our data is retrieved via coinbase, as a result, your total
+                    value may change when using other exchanges.
+                </div>
+            </div>
         </section>
 
         <section>
-            <form class="container mt-4" id="calculator">
-                <div class="mb-3">
+            <form class="container mt-4 border border-2 p-4 highlight-border rounded-3" id="calculator">
+
+                <div class="mb-4">
                     <label for="coinAmount" class="form-label">Total Coins</label>
                     <input type="number" class="form-control" id="coinAmount" aria-describedby="coin-amount" required>
-                    <div id="coinHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <div id="coinHelp" class="form-text text-light">Total amount of coins.</div>
                 </div>
-                <div class="mb-3">
+
+                <div class="mb-4">
                     <select class="form-select" aria-label="Default select example" id="currencySelect">
                         <option selected>Currencies</option>
                     </select>
+                    <div id="selectHelp" class="form-text text-light">Currency you want to check.</div>
                 </div>
+
+                <div class="d-flex mb-4">
+                    <div class="form-check me-4">
+                        <input class="form-check-input" type="radio" name="currency" id="gbp" checked>
+                        <label class="form-check-label" for="gbp">
+                            GBP
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="currency" id="usd">
+                        <label class="form-check-label" for="usd">
+                            USD
+                        </label>
+                    </div>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <h3 class="mt-4">Result: <span class="highlight" id="result"></span></h3>
+
             </form>
         </section>
 
-        <section class="container mt-3">
-            <h3>Result: <span class="highlight" id="result"></span></h3>
-        </section>
+
+
 
     </main>
 

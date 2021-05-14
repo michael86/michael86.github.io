@@ -31,9 +31,9 @@ window.onload = () => {
         });
 };
 
-const getCurrentPrice = async baseId => {
+const getCurrentPrice = async (country, baseId) => {
 
-    const getSingle = `https://www.coinbase.com/api/v2/assets/prices/${baseId}?base=usd`;
+    const getSingle = `https://www.coinbase.com/api/v2/assets/prices/${baseId}?base=${country ? 'gbp' : 'usd'}`;
     let price = 0;
 
     await axios.get(getSingle)
@@ -53,7 +53,7 @@ const getCurrentPrice = async baseId => {
 };
 
 
-const calculateResult = async amount => {
+const calculateResult = async (country, amount) => {
 
     let item;
 
@@ -65,8 +65,7 @@ const calculateResult = async amount => {
     };
 
     try {
-
-        return await getCurrentPrice(item.base_id) * amount;
+        return await getCurrentPrice(country, item.base_id) * amount;
     } catch { console.log('error calculating value ') };
 
 };
@@ -75,12 +74,13 @@ form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const amount = this.elements.coinAmount.value;
+    const countryCurrency = this.elements.gbp.checked ? true : false;
     currency = this.elements.currencySelect.value;
 
     if (amount === '') return;
     if (currency === 'Currencies') return;
 
     const result = document.getElementById('result');
-    result.innerText = `\$${await calculateResult(amount)}`;
+    result.innerText = `${countryCurrency ? '£' : '$'}${await calculateResult(countryCurrency, amount)}`;
 
 });

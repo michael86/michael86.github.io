@@ -55,6 +55,22 @@ h1 {
   text-decoration: underline;
 }
 
+.highlight-border {
+  border-color: #41ead444 !important;
+}
+
 option {
   color: black;
+}
+
+@media only screen and (min-width: 992px) {
+  form {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .border {
+    border: 0px solid !important;
+  }
 }
