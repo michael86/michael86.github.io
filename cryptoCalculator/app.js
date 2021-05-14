@@ -81,6 +81,8 @@ form.addEventListener('submit', async function (e) {
     if (currency === 'Currencies') return;
 
     const result = document.getElementById('result');
-    result.innerText = `${countryCurrency ? '£' : '$'}${await calculateResult(countryCurrency, amount)}`;
+
+    result.innerText = `${countryCurrency ? '£' : '$'}${Math.round((
+        await calculateResult(countryCurrency, amount) + Number.EPSILON) * 100) / 100}`;
 
 });
