@@ -19,7 +19,8 @@ AddTargetModel(peds, {
             vector3(987.0, 654.0, 321.0),
         }
     }},
-    distance = 2.5
+    distance = 2.5,
+    vehicle=true --Not needed if entity doesn't need to be a vehicle, and not in polyZone
     }
 )`,
         snippet: 'BT Target is used for the 3rd eye. It allows us to remove unnecersary constant distance checks. '
@@ -60,6 +61,11 @@ TriggerServerEvent("carlock:issueTempKey", GetVehicleNumberPlateText(vehicle));`
     end
 end)`,
         snippet: 'Mythic Prog Bar is used to play a progress bar, along with an animation if one is passed to it.'
+    },
+    ['mythic_progbar']: {
+        code: `exports['mythic_notify']:SendAlert('type', 'message') --Valid types: inform, success, error`,
+        snippet: 'Mythic Notify is used to show the messages in the top right..'
     }
+
 
 }
